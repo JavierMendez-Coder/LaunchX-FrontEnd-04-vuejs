@@ -17,12 +17,13 @@
         listName="Flavors"
         :itemsList="[
           { id: 'f0', checked: false, itemName: 'Raspberry', price: 8.5 },
-          { id: 'f1', checked: true, itemName: 'Strawberry', price: 7.5 },
+          { id: 'f1', checked: false, itemName: 'Strawberry', price: 7.5 },
           { id: 'f2', checked: false, itemName: 'Apple', price: 4.5 },
           { id: 'f3', checked: false, itemName: 'Raspberry', price: 8.5 },
           { id: 'f4', checked: false, itemName: 'Strawberry', price: 7.5 },
           { id: 'f5', checked: false, itemName: 'Apple', price: 4.5 },
         ]"
+        :listNo="0"
       />
 
       <SelectMenu
@@ -30,13 +31,19 @@
         listName="Toppings"
         :itemsList="[
           { id: 't0', checked: false, itemName: 'Raspberry', price: 8.5 },
-          { id: 't1', checked: true, itemName: 'Strawberry', price: 7.5 },
+          { id: 't1', checked: false, itemName: 'Strawberry', price: 7.5 },
           { id: 't2', checked: false, itemName: 'Apple', price: 4.5 },
           { id: 't3', checked: false, itemName: 'Raspberry', price: 8.5 },
           { id: 't4', checked: false, itemName: 'Strawberry', price: 7.5 },
           { id: 't5', checked: false, itemName: 'Apple', price: 4.5 },
         ]"
+        :listNo="1"
       />
+
+      <div class="wrapper">
+        <p>Total Amount: <span>${{ (30 + $store.state.amount.total).toFixed(2) }}</span> USD</p>
+      </div>
+      <p class="note">Note: A pie has a base price of $30.00 USD.</p>
     </div>
   </section>
 </template>
@@ -74,5 +81,31 @@ h2 {
 section.menu .description {
   line-height: 1.5rem;
   color: var(--description-txt-color);
+}
+
+.wrapper {
+  overflow: hidden;
+  margin: 1em;
+  border-radius: 1em / 1em;
+  box-shadow: 0.05em 0.1em 0.2em rgba(6, 6, 6, 0.25);
+}
+
+.wrapper p {
+  cursor: pointer;
+  padding: 0.7em 1.4em;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.wrapper span {
+  color: var(--accent-color);
+}
+
+.note {
+  color: var(--description-txt-color);
+  text-align: center;
+  font-size: 0.9rem;
 }
 </style>

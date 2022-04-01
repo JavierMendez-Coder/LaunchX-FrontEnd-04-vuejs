@@ -4,10 +4,7 @@
       <p>
         List of <span>{{ listName }}</span>
       </p>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 30 16"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 16">
         <path
           :id="`${id}-arrow`"
           class="down"
@@ -23,7 +20,7 @@
         :id="item.id"
         :itemName="item.itemName"
         :price="item.price"
-        @click="checkItem(item.id)"
+        @click="checkItem(item)"
       />
     </div>
   </div>
@@ -38,25 +35,51 @@ export default {
     id: String,
     listName: String,
     itemsList: Array,
+    listNo: Number,
+  },
+  data() {
+    return {
+      selectedItemsList: [],
+    };
   },
   components: {
     SelectItem,
   },
   methods: {
-    checkItem(id) {
-      const selectItem = document.getElementById(id);
-      const checkbox = document.getElementById(`${id}cb`);
-      if (selectItem.classList.contains("checked")) {
-        selectItem.classList.remove("checked");
+    checkItem(item) {
+      const selectedItem = document.getElementById(item.id);
+      const checkbox = document.getElementById(`${item.id}-cb`);
+
+      if (selectedItem.classList.contains("checked")) {
+        selectedItem.classList.remove("checked");
         checkbox.classList.remove("checked");
-      } else {
-        selectItem.classList.add("checked");
+        this.selectedItemsList = this.selectedItemsList.filter(
+          (e) => item.id !== e.id
+        );
+      } else if (this.selectedItemsList.length >= 3) {
+        const removeItem = this.selectedItemsList.shift();
+        const removeSelectedItem = document.getElementById(removeItem.id);
+        const removeCheckbox = document.getElementById(`${removeItem.id}-cb`);
+
+        removeSelectedItem.classList.remove("checked");
+        removeCheckbox.classList.remove("checked");
+
+        selectedItem.classList.add("checked");
         checkbox.classList.add("checked");
+        this.selectedItemsList.push(item);
+      } else {
+        selectedItem.classList.add("checked");
+        checkbox.classList.add("checked");
+        this.selectedItemsList.push(item);
       }
+      this.$store.commit("saveSelectedItems", {
+        list: this.selectedItemsList,
+        listNo: this.listNo,
+      });
     },
     clickHandler(id) {
       const body = document.getElementById(`${id}-body`);
-      const arrow= document.getElementById(`${id}-arrow`);
+      const arrow = document.getElementById(`${id}-arrow`);
       if (body.classList.contains("hide")) {
         body.classList.remove("hide");
         arrow.classList.remove("down");
@@ -95,7 +118,7 @@ export default {
 
 .header p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 

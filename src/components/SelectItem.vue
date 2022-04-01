@@ -1,7 +1,7 @@
 <template>
   <div class="item" :id="id">
     <div class="wrapper">
-      <Checkbox :id="`${id}cb`" />
+      <Checkbox :id="`${id}-cb`" />
       {{ itemName }}
     </div>
     ${{ price.toFixed(2) }}
