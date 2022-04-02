@@ -1,5 +1,4 @@
 <template>
-  <div id="top"></div>
   <Navbar />
   <Hero />
   <Menu />

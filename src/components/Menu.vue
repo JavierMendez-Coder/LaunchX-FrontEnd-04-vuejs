@@ -1,6 +1,6 @@
 <template>
   <section class="menu">
-    <img src="../assets/top-pie-image.png" alt="Top pie image" />
+    <div class="menu-img"></div>
     <div class="right-column">
       <h2>Menu</h2>
       <p class="description">
@@ -41,7 +41,10 @@
       />
 
       <div class="wrapper">
-        <p>Total Amount: <span>${{ (30 + $store.state.amount.total).toFixed(2) }}</span> USD</p>
+        <p>
+          Total Amount:
+          <span>${{ (30 + $store.state.amount.total).toFixed(2) }}</span> USD
+        </p>
       </div>
       <p class="note">Note: A pie has a base price of $30.00 USD.</p>
     </div>
@@ -60,11 +63,13 @@ export default {
 </script>
 
 <style scoped>
-section.menu img {
+.menu-img {
   width: 100%;
   height: 11em;
-  object-fit: cover;
-  background-position-x: 30%;
+  background: url("../assets/top-pie-image.png");
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 70%;
 }
 
 h2 {
@@ -107,5 +112,32 @@ section.menu .description {
   color: var(--description-txt-color);
   text-align: center;
   font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -4em;
+  }
+
+  .menu-img {
+    margin-left: -6em;
+    width: calc(100% + 6em);
+    height: 45em;
+    object-fit: cover;
+    background-position-x: 30%;
+  }
+
+  .right-column {
+    margin-left: 3em;
+  }
+
+  h2 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: var(--main-txt-color);
+    text-align: center;
+  }
 }
 </style>

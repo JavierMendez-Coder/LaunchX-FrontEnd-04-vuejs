@@ -3,7 +3,7 @@
     <div class="left-column">
       <p class="subhead">great pies made just for you</p>
       <h1>treat yourself with only the best</h1>
-      <router-link class="cta-button" to="#menu">check our menu</router-link>
+      <router-link class="cta-button" to="">check our menu</router-link>
     </div>
     <div class="hero-img"></div>
   </section>
@@ -55,9 +55,40 @@ section.hero .cta-button {
   padding: 0.6em 1em;
   color: var(--secondary-txt-color);
   background-color: var(--accent-color);
-  border-radius: 12% / 50%;
+  border: 1px solid var(--accent-color);
+  border-radius: 2em;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+section.hero .cta-button:hover {
+  background: rgba(64, 64, 64, 0.3);
+  color: var(--secondary-txt-color);
+  border: 1px solid var(--secondary-txt-color);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 920px) {
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+  }
+
+  section.hero {
+    color: var(--main-txt-color);
+    width: 40%;
+  }
+
+  .subhead {
+    margin-top: 10em;
+  }
+
+  section.hero .cta-button:hover {
+    background: none;
+  border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
 }
 </style>

@@ -3,15 +3,15 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
   --main-txt-color: #292929;
   --secondary-txt-color: white;
   --description-txt-color: #717171;
-  --accent-color: #F11256;
+  --accent-color: #f11256;
   --secondary-color: #292929;
-  --secondary-bg-color: #E4E4E4;
+  --secondary-bg-color: #e4e4e4;
 }
 
 #app {
@@ -35,11 +35,17 @@ a {
 }
 
 .logo span {
-  color: var(--accent-color)
+  color: var(--accent-color);
 }
 
 .logo .raspberry-pie-logo {
   width: 1.4em;
-  margin-right: .8em;
+  margin-right: 0.8em;
+}
+
+@media only screen and (min-width: 680px) {
+  #app {
+    margin: 1.5em 5em;
+  }
 }
 </style>
