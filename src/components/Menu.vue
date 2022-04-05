@@ -40,7 +40,7 @@
         :listNo="1"
       />
 
-      <div class="wrapper">
+      <div class="order-button" @click="$store.commit('addOrder')">
         <p>
           Total Amount:
           <span>${{ (30 + $store.state.amount.total).toFixed(2) }}</span> USD
@@ -88,14 +88,18 @@ section.menu .description {
   color: var(--description-txt-color);
 }
 
-.wrapper {
+.order-button {
   overflow: hidden;
   margin: 1em;
   border-radius: 1em / 1em;
   box-shadow: 0.05em 0.1em 0.2em rgba(6, 6, 6, 0.25);
 }
 
-.wrapper p {
+.order-button:hover {
+  background: var(--secondary-bg-color);
+}
+
+.order-button p {
   cursor: pointer;
   padding: 0.7em 1.4em;
   margin: 0;
@@ -104,7 +108,7 @@ section.menu .description {
   font-weight: bold;
 }
 
-.wrapper span {
+.order-button span {
   color: var(--accent-color);
 }
 
