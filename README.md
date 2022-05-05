@@ -47,12 +47,13 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#compilation">Compilation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+      <ul>
+        <li><a href="#bonus">Bonus</a></li>
+      </ul>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -118,15 +119,6 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -135,7 +127,7 @@ Use this space to show useful examples of how a project can be used. Additional 
     - [x] Show the different flavors and prices for each one
     - [x] Combine flavors and toppings
 - [x] Shop baker page components:
-    - [x] Display the customer's orders
+    - [x] Display the customers orders
 - [x] Use of routes to access to the customer and baker page (Vue's router)
 - [x] Information about flavors, toppings, amounts, and prices must be in the Vuex's state.
 
