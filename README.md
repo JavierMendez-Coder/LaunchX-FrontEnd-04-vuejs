@@ -22,7 +22,7 @@
     <a href="https://github.com/JavierMendez-Coder/LaunchX-FrontEnd-04-vuejs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/JavierMendez-Coder/LaunchX-FrontEnd-04-vuejs">View Demo</a>
+    <a href="https://javiermendez-coder.github.io/LaunchX-FrontEnd-04-vuejs/">View Page</a>
     ·
     <a href="https://github.com/JavierMendez-Coder/LaunchX-FrontEnd-04-vuejs/issues">Report Bug</a>
     ·
@@ -64,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Pie Shop][page-screenshot]](https://example.com)
+[![Pie Shop][page-screenshot]](https://javiermendez-coder.github.io/LaunchX-FrontEnd-04-vuejs/)
 
 Practice project designed by [Rodrigo Martínez][romarpla] from [Launch X][launchx] aimed to design a cake shop using the Vue.js framework to design components for the web app, alongside the use of routes and state management (Vuex) tools provided by the framework.
 
