@@ -133,7 +133,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Bonus:
 - [x] Responsive design
-- [ ] Web app deployment
+- [x] Web app deployment
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -172,3 +172,4 @@ Project Link: [https://github.com/JavierMendez-Coder/LaunchX-FrontEnd-04-vuejs](
 [page-screenshot]: images/page-screenshot.png
 [launchx]: https://github.com/LaunchX-InnovaccionVirtual
 [romarpla]: https://github.com/romarpla
+
