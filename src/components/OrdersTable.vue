@@ -21,9 +21,6 @@ export default {
   components: {
     OrderTableElement,
   },
-  created() {
-    console.log(this.$store.state.orders);
-  },
 };
 </script>
 

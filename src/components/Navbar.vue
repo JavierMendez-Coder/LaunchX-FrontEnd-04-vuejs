@@ -95,11 +95,24 @@
       </svg>
     </header>
   </div>
-</template>  
+</template>
 
 <script>
 export default {
   name: "Navbar",
+  mounted: function () {
+    const menu = document.querySelector(".hamburger-menu");
+    const close = document.querySelector(".close");
+    const nav = document.querySelector("nav");
+
+    menu.addEventListener("click", () => {
+      nav.classList.add("open-nav");
+    });
+
+    close.addEventListener("click", () => {
+      nav.classList.remove("open-nav");
+    });
+  },
 };
 </script>
 
@@ -154,6 +167,10 @@ header .hamburger-menu {
   cursor: pointer;
 }
 
+.open-nav {
+  transform: translateX(0%);
+}
+
 @media only screen and (min-width: 920px) {
   .hamburger-menu {
     display: none;
@@ -191,7 +208,7 @@ header .hamburger-menu {
   }
 
   .cta-button {
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     color: var(--secondary-txt-color);
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);
