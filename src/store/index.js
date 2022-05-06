@@ -50,8 +50,6 @@ export default createStore({
       state.amount.total = 0;
 
       state.orders.push(order);
-
-      console.log(state.orders);
     },
   },
   actions: {},

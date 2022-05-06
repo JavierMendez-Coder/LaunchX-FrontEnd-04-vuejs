@@ -2,7 +2,7 @@
   <Navbar />
   <h1>Orders page</h1>
   <OrdersTable />
-  <Info class="bottom" />
+  <Info />
 </template>
 
 <script>
@@ -19,9 +19,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.bottom {
-  bottom: 0;
-}
-</style>

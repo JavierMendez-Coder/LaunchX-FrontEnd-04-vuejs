@@ -24,29 +24,29 @@ export default {
     toppingsList: Array,
     cost: Number,
   },
-}
+};
 </script>
 
 <style scoped>
-  .table-element {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    font-size: .9em;
-    padding: .2em .5em;
-    background-color: var(--secondary-bg-color);
-    border: 1px solid rgba(66, 66, 66, .2);
-  }
+.table-element {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+  background-color: var(--secondary-bg-color);
+  border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+}
 
-  .table-element p {
-    margin: 0;
-  }
+.table-element p {
+  margin: 0;
+}
 
-  .table-element ul {
-    margin: 0;
-    padding: 0;
-  }
+.table-element ul {
+  margin: 0;
+  padding: 0;
+}
 
-  .table-element li {
-    list-style-type: none;
-  }
+.table-element li {
+  list-style-type: none;
+}
 </style>

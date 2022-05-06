@@ -53,13 +53,15 @@ export default {
 
 <style scoped>
 section.info {
-  position: absolute;
-  width: calc(100% - 4em);
-  left: 0;
+  position: relative;
+  clear: both;
+  width: 100%;
+  left: -2em;
   padding: 2em;
   margin-top: 4em;
   background-color: var(--secondary-bg-color);
   text-align: center;
+  margin-bottom: -5em;
 }
 
 section.info .title {
@@ -75,7 +77,7 @@ section.info .description {
 
 @media only screen and (min-width: 680px) {
   section.info {
-    width: calc(100% - 11em);
+    left: -5.5em;
     padding: 2em 5.5em;
   }
 }
